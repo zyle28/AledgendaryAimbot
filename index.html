@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALEGENDARY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <a href="#" class="logo">ALEGENDARY</a>
         <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#price">Pricing</a>
-            <a href="#faq">FAQ</a>
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+            <a href="#price"><i class="fas fa-dollar-sign"></i> Pricing</a>
+            <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+            <a href="https://discord.gg/NvmgUN5r" class="discord-btn" target="_blank">
+                <i class="fab fa-discord"></i> Discord
+            </a>
         </div>
     </nav>
 
@@ -21,12 +26,16 @@
     <section id="home">
         <div class="section-container home-container">
             <div class="text-content">
-                <h1>Aledgendary Aimbot</h1>
+                <h1>ALEGENDARY Aimbot</h1>
                 <p>Aim with Confidence, Win with ALEGENDARY!
-                <br>Stay focused, take your shot, and rise above the rest. 
-                <br>With precision and determination, victory is yours to claim.</p>
+                Stay focused, take your shot, and rise above the rest.
+                With precision and determination, victory is yours to claim.</p>
+                <a href="#price" class="cta-btn">
+                    Get Started <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-            <iframe 
+            <div class="video-wrapper">
+                <iframe 
                 width="560" height="315" 
                 src="https://www.youtube.com/embed/qZK7eCWu5fc?si=0zp-hZ0RlU5iWnIj" 
                 title="YouTube video player" 
@@ -35,12 +44,13 @@
                 referrerpolicy="strict-origin-when-cross-origin" 
                 allowfullscreen>
             </iframe>
+            </div>
         </div>
     </section>
     
     <section id="faq">
         <div class="section-container">
-            <h1 class="glow-text">Why Aledgenadary?</h1>
+            <h1 class="glow-text">Why Aledgendary?</h1>
             <p class="glow-text">Founded in 2022, ALEGENDARY started as an open-source project fueled by a community eager to enhance gaming experiences. Initially a proof of concept for discreetly using external hardware to gain an advantage in games, ALEGENDARY has transformed into a user-friendly service. Now, it requires no programming knowledge and is available through a simple monthly subscription.</p>
             <h1 class="glow-text">How It Works</h1>
             <p class="glow-text">ALEGENDARY detects specific colors on your game screen, such as those of enemy players. When it identifies these colors, it instructs an external device (Arduino Leonardo) to adjust your crosshair directly onto the targets. The Arduino Leonardo can mimic a standard mouse, ensuring the process remains undetectable, as it does not interfere with the game's code or files. With ALEGENDARY, you gain a stealthy advantage in your games!</p>

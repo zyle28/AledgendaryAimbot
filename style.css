@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: white;
     overflow-x: hidden;
 }
@@ -17,7 +17,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
 }
 
@@ -49,12 +49,7 @@ nav {
     top: 0;
     left: 0;
     z-index: -1;
-    background: #000000;
-}
-
-.content {
-    position: relative;
-    padding-top: 80px;
+    background: #000;
 }
 
 section {
@@ -65,7 +60,6 @@ section {
     width: 100%;
 }
 
-/* Common container styling for all sections */
 .section-container {
     width: 100%;
     max-width: 1200px;
@@ -82,20 +76,7 @@ section {
 
 .text-content {
     flex: 1;
-    max-width: 600px;
-}
-
-/* FAQ and Pricing sections alignment */
-#faq .section-container,
-#price .section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Remove previous center alignment */
-#faq, #price {
-    text-align: left;
-    justify-content: flex-start;
+    max-width: 800px;
 }
 
 h1 {
@@ -109,13 +90,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-/* Pricing Section Styles */
 .pricing-container {
     display: flex;
     justify-content: center;
@@ -181,7 +155,6 @@ p {
     background: #dd16c3;
 }
 
-/* Highlighted Plan */
 .highlighted {
     background: rgba(216, 184, 0, 0.15);
     transform: scale(1.05);
@@ -189,27 +162,9 @@ p {
 
 .highlighted-btn {
     background: #fff;
-    color: #000000;
+    color: #000;
 }
 
-@media (max-width: 768px) {
-    .pricing-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .pricing-column {
-        width: 100%;
-        max-width: 400px;
-    }
-    
-    .highlighted {
-        transform: scale(1);
-    }
-}
-/* Existing CSS remains the same */
-
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
     nav {
         padding: 15px 20px;
@@ -227,7 +182,6 @@ p {
         font-size: 14px;
     }
 
-    /* Home Section Adjustments */
     .home-container {
         flex-direction: column;
         gap: 30px;
@@ -243,17 +197,16 @@ p {
         height: 200px;
     }
 
-    /* FAQ Section Adjustments */
-    #faq h1.glow-text,
+    #faq h1,
     #price h1 {
         font-size: 2em;
     }
 
-    #faq p.glow-text {
+    #faq p,
+    #price p {
         font-size: 1em;
     }
 
-    /* Pricing Section Adjustments */
     .pricing-container {
         flex-direction: column;
         align-items: center;
@@ -261,66 +214,67 @@ p {
 
     .pricing-column {
         width: 100%;
-        max-width: 100%;
+        max-width: 400px;
     }
 
     .highlighted {
         transform: scale(1);
-        order: -1; /* Bring highlighted plan to top */
+        order: -1;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 610px) {
     nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-        background: violet;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 12px;
     }
 
     .nav-links {
-        margin-top: 10px;
-        flex-wrap: wrap;
         gap: 10px;
     }
 
     .nav-links a {
-        font-size: 15px;
+        font-size: 11px;
+    }
+
+    .home-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .text-content {
+        max-width: 100%;
     }
 
     h1 {
-        font-size: 25px;
-        margin-bottom: 1px;
+        font-size: 1.5em;
     }
 
+    p {
+        font-size: 0.6em;
+    }
 
     .price {
-        font-size: 2em;
+        font-size: 1.25em;
     }
 
     .price-btn {
-        padding: 10px 25px;
-        font-size: 1em;
+        padding: 5px 10px;
+        font-size: 0.6em;
     }
 
-    /* Adjust section padding */
     section {
-        padding: 60px 20px;
-        min-height: auto;
-    }
-    #canvas {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background: violet ;
+        padding: 30px 10px;
     }
 }
 
-/* Add responsive aspect ratio for YouTube embed */
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 40%; /* 16:9 aspect ratio */
     height: 0;
     width: 100%;
 }
@@ -331,4 +285,31 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
+}
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #dd16c3, #ff6a00); /* Gradient background */
+    color: white;
+    padding: 12px 24px; /* Padding for the button */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 1.1em; /* Font size */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.cta-btn:hover {
+    background: linear-gradient(90deg, #ff6a00, #dd16c3); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.cta-btn i {
+    margin-left: 8px; /* Space between text and icon */
+    transition: transform 0.3s ease; /* Smooth transition for icon */
+}
+
+.cta-btn:hover i {
+    transform: translateX(5px); /* Move icon to the right on hover */
 }
