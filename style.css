@@ -270,11 +270,12 @@ p {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     nav {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 15px;
+        align-items: center;
+        padding: 5px;
+        background: #000000;
     }
 
     .nav-links {
@@ -284,13 +285,14 @@ p {
     }
 
     .nav-links a {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     h1 {
-        font-size: 2em;
-        margin-bottom: 20px;
+        font-size: 25px;
+        margin-bottom: 1px;
     }
+
 
     .price {
         font-size: 2em;
@@ -303,7 +305,7 @@ p {
 
     /* Adjust section padding */
     section {
-        padding: 40px 20px;
+        padding: 60px 20px;
         min-height: auto;
     }
 }
