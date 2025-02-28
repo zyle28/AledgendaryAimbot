@@ -271,6 +271,54 @@ p {
         padding: 30px 10px;
     }
 }
+@media (max-width: 350px) {
+    nav {
+        padding: 5px 10px;
+    }
+
+    .logo {
+        font-size: 8px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+    }
+
+    .home-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.6em;
+    }
+
+    .price {
+        font-size: 1.25em;
+    }
+
+    .price-btn {
+        padding: 5px 10px;
+        font-size: 0.6em;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+}
 
 .video-wrapper {
     position: relative;
