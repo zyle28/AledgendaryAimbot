@@ -275,7 +275,7 @@ p {
         flex-direction: column;
         align-items: center;
         padding: 5px;
-        background: #000000;
+        background: violet;
     }
 
     .nav-links {
@@ -307,6 +307,13 @@ p {
     section {
         padding: 60px 20px;
         min-height: auto;
+    }
+    #canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: violet ;
     }
 }
 
