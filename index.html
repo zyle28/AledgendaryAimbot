@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALEGENDARY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">ALEGENDARY</a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#price">Pricing</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+
+    <canvas id="canvas"></canvas>
+
+    <section id="home">
+        <div class="section-container home-container">
+            <div class="text-content">
+                <h1>Aledgendary Aimbot</h1>
+                <p>Aim with Confidence, Win with ALEGENDARY!
+                <br>Stay focused, take your shot, and rise above the rest. 
+                <br>With precision and determination, victory is yours to claim.</p>
+            </div>
+            <iframe 
+                width="560" height="315" 
+                src="https://www.youtube.com/embed/qZK7eCWu5fc?si=0zp-hZ0RlU5iWnIj" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    
+    <section id="faq">
+        <div class="section-container">
+            <h1 class="glow-text">Why Aledgenadary?</h1>
+            <p class="glow-text">Founded in 2022, ALEGENDARY started as an open-source project fueled by a community eager to enhance gaming experiences. Initially a proof of concept for discreetly using external hardware to gain an advantage in games, ALEGENDARY has transformed into a user-friendly service. Now, it requires no programming knowledge and is available through a simple monthly subscription.</p>
+            <h1 class="glow-text">How It Works</h1>
+            <p class="glow-text">ALEGENDARY detects specific colors on your game screen, such as those of enemy players. When it identifies these colors, it instructs an external device (Arduino Leonardo) to adjust your crosshair directly onto the targets. The Arduino Leonardo can mimic a standard mouse, ensuring the process remains undetectable, as it does not interfere with the game's code or files. With ALEGENDARY, you gain a stealthy advantage in your games!</p>
+        </div>
+    </section>
+    
+    <section id="price">
+        <div class="section-container">
+            <h1>Our Pricing</h1>
+            <p>Simple and transparent pricing plans for all needs.</p>
+            
+            <div class="pricing-container">
+                <!-- Basic Plan -->
+                <div class="pricing-column">
+                    <h3>Basic Plan</h3>
+                    <div class="price">$12.99</div>
+                    <ul class="features">
+                        <li>Software Only</li>
+                        <li>Basic Support</li>
+                        <li>1 Month Updates</li>
+                    </ul>
+                    <a href="https://discord.gg/NvmgUN5r" class="price-btn" target="_blank" rel="noopener noreferrer">
+                        Get Started
+                    </a>
+                </div>
+    
+                <!-- Pro Plan -->
+                <div class="pricing-column highlighted">
+                    <h3>Pro Plan</h3>
+                    <div class="price">$24.99</div>
+                    <ul class="features">
+                        <li>Software Lifetime</li>
+                        <li>Arduino Leonardo</li>
+                        <li>USB Host Shield</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="https://discord.gg/NvmgUN5r" class="price-btn highlighted-btn" target="_blank" rel="noopener noreferrer">
+                        Get Pro
+                    </a>
+                </div>
+    
+                <!-- Hardware Plan -->
+                <div class="pricing-column">
+                    <h3>Hardware Pack</h3>
+                    <div class="price">$12.99</div>
+                    <ul class="features">
+                        <li>Arduino Leonardo</li>
+                        <li>USB Host Shield</li>
+                        <li>Basic Setup Guide</li>
+                    </ul>
+                    <a href="https://discord.gg/NvmgUN5r" class="price-btn" target="_blank" rel="noopener noreferrer">
+                        Purchase
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

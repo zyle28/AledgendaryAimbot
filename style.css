@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #000000;
+}
+
+.content {
+    position: relative;
+    padding-top: 80px;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 5%;
+    width: 100%;
+}
+
+/* Common container styling for all sections */
+.section-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* FAQ and Pricing sections alignment */
+#faq .section-container,
+#price .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Remove previous center alignment */
+#faq, #price {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+/* Pricing Section Styles */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.pricing-column {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.pricing-column:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-column h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.price {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #dd16c3;
+}
+
+.features {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.features li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.features li:last-child {
+    border-bottom: none;
+}
+
+.price-btn {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+.price-btn:hover {
+    background: #dd16c3;
+}
+
+/* Highlighted Plan */
+.highlighted {
+    background: rgba(216, 184, 0, 0.15);
+    transform: scale(1.05);
+}
+
+.highlighted-btn {
+    background: #fff;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pricing-column {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .highlighted {
+        transform: scale(1);
+    }
+}
+/* Existing CSS remains the same */
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    /* Home Section Adjustments */
+    .home-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    /* FAQ Section Adjustments */
+    #faq h1.glow-text,
+    #price h1 {
+        font-size: 2em;
+    }
+
+    #faq p.glow-text {
+        font-size: 1em;
+    }
+
+    /* Pricing Section Adjustments */
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-column {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .highlighted {
+        transform: scale(1);
+        order: -1; /* Bring highlighted plan to top */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .price {
+        font-size: 2em;
+    }
+
+    .price-btn {
+        padding: 10px 25px;
+        font-size: 1em;
+    }
+
+    /* Adjust section padding */
+    section {
+        padding: 40px 20px;
+        min-height: auto;
+    }
+}
+
+/* Add responsive aspect ratio for YouTube embed */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    width: 100%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
